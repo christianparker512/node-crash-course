@@ -8,3 +8,6 @@ setTimeout(() =>{
 const int = setInterval(() => {
     console.log("Hook'em Horns every one second");
 }, 1000);
+
+console.log(__dirname);
+console.log(__filename);

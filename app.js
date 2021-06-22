@@ -11,6 +11,12 @@ app.use((req, res) =>{
     console.log('host: ', req.hostname);
     console.log('path: ', req.path);
     console.log('method: ', req.method);
+    next();
+});
+
+app.use((req, res) =>{
+    console.log('in hte next middleware');
+    next();
 });
 // register view engine
 app.set('view engine', 'ejs');

@@ -1,33 +1,21 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog</title>
-</head>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
 <body>
-<nav>
-    <div class="site-title">
-        <a href="/"><h1>LJS HOMES</h1></a>
-        <p>Making Broken Homes Happy</p>
-    </div>
-    <ul>
-        <li><a href="/">Houses</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blogs/create">New House</a></li>
-    </ul>
-</nav>
+<%- include("./partials/nav.ejs") %>
+
 <div class="create-blog content">
     <form>
-        <label for="title">Blog Title:</label>
-        <input type="text" id="title" required>
-        <label for="snippet">Blog Snippet:</label>
-        <input type="text" id="snippet" required>
-        <textarea for="body" required></textarea>
+        <label for="title">Blog title:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="snippet">Blog snippet:</label>
+        <input type="text" id="snippet" name="snippet" required>
+        <label for="body">Blog body:</label>
+        <textarea id="body" name="body" required></textarea>
         <button>Submit</button>
     </form>
 </div>
+
+<%- include("./partials/footer.ejs") %>
 </body>
 </html>

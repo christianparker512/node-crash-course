@@ -1,36 +1,16 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog</title>
-</head>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
 <body>
-<nav>
-    <div class="site-title">
-        <a href="/"><h1>LJS HOMES</h1></a>
-        <p>Making Broken Homes Happy</p>
-    </div>
-    <ul>
-        <li><a href="/">Houses</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blogs/create">New House</a></li>
-    </ul>
-</nav>
+<%- include("./partials/nav.ejs") %>
+
 <div class="about content">
     <h2>About Us</h2>
-    <p>a;lksjdf;lasdfl;jasdflkjas;ldfj;alsdf;asldkfja;lsdfj;alsdfj;k</p>
-    <p>a;lksjdf;lasdfl;jasdflkjas;ldfj;alsdf;asldkfja;lsdfj;alsdfj;k</p>
-    <p>a;lksjdf;lasdfl;jasdflkjas;ldfj;alsdf;asldkfja;lsdfj;alsdfj;k</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia quibusdam quaerat illo a modi tenetur ut blanditiis, illum quo consectetur recusandae excepturi natus impedit rem, tempora cum fuga quae in.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia quibusdam quaerat illo a modi tenetur ut blanditiis, illum quo consectetur recusandae excepturi natus impedit rem, tempora cum fuga quae in.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia quibusdam quaerat illo a modi tenetur ut blanditiis, illum quo consectetur recusandae excepturi natus impedit rem, tempora cum fuga quae in.</p>
 </div>
-<div class = "Home Listings">
-    <h2>All Houses</h2>
-</div>
-<h1>Home</h1>
-<h2>Your path is becoming a node.js expert</h2>
 
-
+<%- include("./partials/footer.ejs") %>
 </body>
 </html>

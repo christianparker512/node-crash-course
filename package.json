@@ -1,12 +1,23 @@
 {
-  "name": "node-crash-course",
+  "name": "crash-course",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "christian parker",
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//christianparker512/node-crash-course.git"
+  },
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

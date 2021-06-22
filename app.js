@@ -12,17 +12,17 @@ app.listen(4000);
 app.get('/', (req,res) =>{
     // res.send('<p>home page</p>');
     // res.sendFile('./views/index.html', {root: __dirname});
-    res.render('index');
+    res.render('index', {title: 'Home'});
 });
     app.get('/about', (req,res) =>{
         // res.send('<p>about page</p>');
-        res.render('about', {root: __dirname});
+        res.render('about', {title: 'About'});
     //redirects
         app.get('/about-us', (req,res)=>{
-            res.render('/about');
+            res.render('/about', {title: 'About'});
         });
         app.get('/blogs/create', (req,res) =>{
-            res.render('/create');
+            res.render('/create', {title: 'Create'});
         });
         //404 middleware functions in express
         app.use((req,res) => {

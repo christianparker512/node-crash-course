@@ -7,7 +7,7 @@ const Blog = require('./models/blog');
 const app = express();
 
 // connect to mongodb & listen for requests
-const dbURI = "mongodb+srv://christian:KDWkbwNx94fjK9f@cluster1.yegp0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const dbURI = "mongodb+srv://:@cluster1.yegp0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(result => app.listen(4000))
@@ -24,6 +24,7 @@ app.use((req, res, next) => {
     next();
 });
 
+app.set('view engine', 'ejs');
 // mongoose & mongo tests
 app.get('/add-blog', (req, res) => {
     const blog = new Blog({

@@ -6,6 +6,9 @@ const app = express();
 // listen for requests
 app.listen(4000);
 
+app.use(express.static('public'));
+app.use(morgan('dev'));
+
 app.use((req, res) =>{
     console.log('new request made: ');
     console.log('host: ', req.hostname);
@@ -15,7 +18,7 @@ app.use((req, res) =>{
 });
 
 app.use((req, res) =>{
-    console.log('in hte next middleware');
+    console.log('in the next middleware');
     next();
 });
 // register view engine
@@ -24,9 +27,9 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
     const blogs = [
-        {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
-        {title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
-        {title: 'How to defeat bowser', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+        {title: 'Christian finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+        {title: 'Lisa finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+        {title: 'How to defeat Baxter', snippet: 'Lorem ipsum dolor sit amet consectetur'},
     ];
     res.render('index', { title: 'Home', blogs });
 });

@@ -18,6 +18,7 @@ const blog_details = (req, res) => {
         })
         .catch(err => {
             console.log(err);
+            res.render('404', { title: 'Blog not found' });
         });
 }
 
@@ -54,3 +55,4 @@ module.exports = {
     blog_create_post,
     blog_delete
 }
+
